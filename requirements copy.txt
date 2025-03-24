@@ -1,0 +1,14 @@
+'''pip install the following by running pip install -r requirements.txt in terminal
+'''
+praw 
+pandas 
+textblob 
+vaderSentiment 
+openai 
+langchain 
+langchain-community 
+langchain-experimental 
+sqlalchemy 
+streamlit 
+matplotlib 
+wordcloud

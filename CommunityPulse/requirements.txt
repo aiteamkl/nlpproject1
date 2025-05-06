@@ -1,0 +1,16 @@
+praw
+pandas
+nltk
+transformers
+spacy
+streamlit
+plotly
+bertopic
+wordcloud
+matplotlib
+folium
+streamlit-folium
+pymongo
+python-dotenv
+scikit-learn
+numpy

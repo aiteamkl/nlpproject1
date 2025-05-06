@@ -1,4 +1,4 @@
-# Community Pulse 🌐📊
+# Community Pulse
 
 **Automated Sentiment Analysis Dashboard for East Bay Civic Insights**
 
@@ -11,11 +11,11 @@ to analyze public sentiment, identify emerging topics, and visualize civic trend
 
 It provides an interactive Streamlit dashboard with:
 
-- 📅 Sentiment trends over time
-- 💬 Word clouds of trending keywords
-- 🔥 Top emerging discussion topics
-- 🗺️ Geographic heatmaps for city mentions
-- 📰 Expandable views of recent posts
+- Sentiment trends over time  
+- Word clouds of trending keywords  
+- Top emerging discussion topics  
+- Geographic heatmaps for city mentions  
+- Expandable views of recent posts  
 
 ---
 
@@ -28,52 +28,49 @@ It provides an interactive Streamlit dashboard with:
 ✅ Keyword extraction with TF-IDF  
 ✅ Interactive Streamlit dashboard (charts, maps, and data exploration)  
 ✅ MongoDB backend for persistent storage of posts and analysis  
-✅ Ready for cloud deployment or local server hosting
+✅ Ready for cloud deployment or local server hosting  
 
 ---
 
 ## How to Run Locally
 
-1. **Clone this repository:**
+### 1. Clone this repository:
 
 ```bash
 git clone https://github.com/aiteamkl/nlpproject1.git
-
-Navigate to the project folder:
-
-bash
-Copy
-Edit
 cd nlpproject1/CommunityPulse
-Create and activate a virtual environment:
+2. Create and activate a virtual environment:
 
-bash
-Copy
-Edit
 python -m venv venv
-venv\Scripts\activate      # (Windows)
-source venv/bin/activate   # (Mac/Linux)
-Install required packages:
 
+# Windows
+venv\Scripts\activate
+
+# Mac/Linux
+source venv/bin/activate
+3. Install required packages:
 bash
 Copy
 Edit
 pip install -r requirements.txt
-Set your environment variables (MongoDB URI, etc.)
-
+4. Set your environment variables:
 Create a .env file with:
 
-ini
-Copy
-Edit
 MONGODB_URI=mongodb://your-server-ip:27017/
-Run the Streamlit dashboard:
+5. Post-install setup (run once):
+Download NLTK data:
 
-bash
-Copy
-Edit
-python -m streamlit run community_pulse_app.py
-✅ Dashboard will open automatically at http://localhost:8501/.
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+Download spaCy model:
+
+python -m spacy download en_core_web_sm
+6. Run the dashboard:
+
+streamlit run community_pulse_app.py
+The dashboard will open at: http://localhost:8501
 
 Tech Stack
 Python (3.10+)
@@ -105,4 +102,3 @@ Scheduled auto-scraping via CRON jobs
 Deeper sarcasm/irony detection in sentiment models
 
 Geo-coded location extraction for precise mapping
-
